@@ -17,7 +17,7 @@
         "execute": {
            "inArguments":[
 				{
-                    "emailAddress": "{{Contact.Attribute.Test-heroku.EmailAddress}}"
+                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
                 }									
 			],
           "outArguments": [],
