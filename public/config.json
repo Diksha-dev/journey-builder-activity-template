@@ -16,9 +16,7 @@
     "arguments": {
         "execute": {
            "inArguments":[
-				{
-                    "emailAddress": "{{Contact.Attribute.CustomActivity.EmailAddress}}"
-                }									
+												
 			],
           "outArguments": [],
           "url": "https://test-appdiksha.herokuapp.com/journeybuilder/execute",
