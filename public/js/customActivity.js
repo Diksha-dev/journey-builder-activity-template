@@ -8,8 +8,8 @@ define([
     var connection = new Postmonger.Session();
     var authTokens = {};
     var payload = {};
-  
     $(window).ready(onRender);
+
     connection.on('initActivity', initialize);
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
@@ -66,11 +66,12 @@ define([
     }
 
     function save() {
-       
+        var postcardURLValue = $('#postcard-url').val();
+        var postcardTextValue = $('#postcard-text').val();
+
         payload['arguments'].execute.inArguments = [{
-            "tokens": authTokens
-            
-           
+            "tokens": authTokens,
+            "emailAddress": "{{Contact.Attribute.PostcardJourney.EmailAddress}}"
         }];
         
         payload['metaData'].isConfigured = true;
