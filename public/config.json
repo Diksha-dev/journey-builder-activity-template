@@ -21,7 +21,11 @@
                 }
 												
 			],
-          "outArguments": [],
+          "outArguments": [
+		  {
+			  "emailAddress":"EmailAddress"
+		  }
+	  ],
           "url": "https://test-appdiksha.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
             "body": "",
