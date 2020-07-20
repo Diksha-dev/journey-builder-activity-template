@@ -71,12 +71,12 @@ define([
 
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
-            "emailAddress": "{{Contact.Attribute.TestCustomActivity.EmailAddress}}"
+            "emailAddress": "{{Contact.Attribute.TestCustomActivity DE.EmailAddress}}"
         }];
         
         payload['metaData'].isConfigured = true;
 
-        console.log(payload);
+        console.log("Payload"+payload);
         connection.trigger('updateActivity', payload);
     }
 
