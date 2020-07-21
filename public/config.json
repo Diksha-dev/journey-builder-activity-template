@@ -16,15 +16,14 @@
     "arguments": {
         "execute": {
            "inArguments":[
-		   {
-                    "emailAddress": "{{Contact.Attribute.TestCustomActivity DE.EmailAddress}}"
-                }
+		   
+			   { "contactKey":"{{Contact.Key}}"} , 
+		   { "emailAddress": "{{Contact.Attribute.TestCustomActivityDE.EmailAddress}}" }
+                
 												
 			],
           "outArguments": [
-		  {
-			  "emailAddress":"EmailAddress"
-		  }
+		
 	  ],
           "url": "https://test-appdiksha.herokuapp.com/journeybuilder/execute",
            "verb": "POST",
