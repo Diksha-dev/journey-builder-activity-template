@@ -25,7 +25,7 @@
           "outArguments": [
 		
 	  ],
-          "url": "https://test-appdiksha.herokuapp.com/journeybuilder/execute",
+          "url": "https://test-appdiksha.herokuapp.com,
            "verb": "POST",
             "body": "",
             "header": "",
