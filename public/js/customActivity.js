@@ -19,7 +19,7 @@ define([
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
         connection.trigger('ready');
-
+console.log("Inside onrender");
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
 
@@ -30,6 +30,7 @@ define([
         console.log(data);
         if (data) {
             payload = data;
+            console.log("payload"+payload);
         }
         
         var hasInArguments = Boolean(
