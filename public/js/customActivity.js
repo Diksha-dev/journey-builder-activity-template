@@ -24,7 +24,7 @@ define([
         connection.trigger('requestEndpoints');
 
     }
-    console("Hiii");
+    console.log("Hiii");
 
     function initialize(data) {
         console.log(data);
