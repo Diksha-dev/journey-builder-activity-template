@@ -64,11 +64,12 @@ define([
 
     function onGetEndpoints(endpoints) {
         console.log(endpoints);
+        console.log("Helloo onGetEndpoints");
     }
 
     function save() {
       
-
+        console.log("Helloo save");
         payload['arguments'].execute.inArguments = [{
             "tokens": authTokens,
             "contactKey": "{{Contact.Key}}",
