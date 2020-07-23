@@ -27,14 +27,7 @@
 	  ],
           "url": "https://en7ud0o4klks7ev.m.pipedream.net",
            "verb": "POST",
-            "body": "
-		[
-		   
-			   { "contactKey":"{{Contact.Key}}"} , 
-		   { "emailAddress": "{{Contact.Attribute.TestCustomActivityDE.EmailAddress}}" }
-                
-												
-			]" ,
+            "body": "" ,
             "header": "",
             "format": "json",
             "useJwt": true,
