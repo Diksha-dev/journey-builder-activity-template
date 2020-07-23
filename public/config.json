@@ -15,21 +15,20 @@
     },
     "arguments": {
         "execute": {
-           "inArguments":[
-		   
-			   { "contactKey":"{{Contact.Key}}"} , 
-		   { "emailAddress": "{{Contact.Attribute.TestCustomActivityDE.EmailAddress}}" }
-                
-												
-			],
+           "inArguments":,
           "outArguments": [
 		
 	  ],
           "url": "https://en7ud0o4klks7ev.m.pipedream.net",
            "verb": "POST",
             "body": "
-		"emailAddress":"{{Contact.Attribute.TestCustomActivityDE.EmailAddress}}",
-	    "contactKey":"{{Contact.Key}}" " ,
+		[
+		   
+			   { "contactKey":"{{Contact.Key}}"} , 
+		   { "emailAddress": "{{Contact.Attribute.TestCustomActivityDE.EmailAddress}}" }
+                
+												
+			]" ,
             "header": "",
             "format": "json",
             "useJwt": true,
