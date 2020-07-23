@@ -15,7 +15,13 @@
     },
     "arguments": {
         "execute": {
-           "inArguments":,
+           "inArguments":[
+		   
+			   { "contactKey":"{{Contact.Key}}"} , 
+		   { "emailAddress": "{{Contact.Attribute.TestCustomActivityDE.EmailAddress}}" }
+                
+												
+			],
           "outArguments": [
 		
 	  ],
