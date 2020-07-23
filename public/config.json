@@ -29,7 +29,7 @@
            "verb": "POST",
             "body": "
 		{"emailAddress":"{{Contact.Attribute.TestCustomActivityDE.EmailAddress}}"},
-	    "contactKey":"{{Contact.Key}}" ",
+	    "contactKey":"{{Contact.Key}}" "
             "header": "",
             "format": "json",
             "useJwt": true,
