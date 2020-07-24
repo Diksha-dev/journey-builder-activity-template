@@ -25,7 +25,7 @@
           "outArguments": [
 		
 	  ],
-          "url": "https://enh82qm9f1l1fwx.m.pipedream.net/execute",
+          "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/execute",
            "verb": "POST",
             "body": "" ,
             "header": "",
@@ -37,22 +37,22 @@
     "configurationArguments": {
       "applicationExtensionKey": "bc18ae66-8f0d-41b7-91d3-a18186e3f889",
       "save": {
-        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/save",
+        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/save",
           "verb": "POST",
         "useJwt": true
        },
        "publish": {
-        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/publish",
+        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/publish",
            "verb": "POST",
         "useJwt": true
        },
       "stop": {
-        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/stop",
+        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/stop",
            "verb": "POST",
         "useJwt": true
       },
       "validate": {
-        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/validate",
+        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/validate",
         "verb": "POST",
         "useJwt": true
       }
