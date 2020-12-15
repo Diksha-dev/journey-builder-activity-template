@@ -45,16 +45,15 @@ var requirejs,require,define;!function(global,setTimeout){function commentReplac
 <body>
 <div id="step1" class="step">
 
-    Select your SMS message:
-    <select id="select1">
-        <option value="">Select an option</option>
-        <option value="someMessage">Some SMS</option>
-        <option value="anotherMessage">Another SMS</option>
-        <option value="thirdMessage">Third SMS</option>
-        <option value="unknownMessage">Unknown SMS</option>
-    </select>
-
-    <button id="toggleLastStep">Toggle Last Step</button>
+    Client ID Source:<input type="text" id="clientidsource">
+    Client Secet Source:<input type="text" id="clientsecretsource">
+    Account Id Source :<input type="text" id="accountIdsource"> 
+    Grant Type Source :<input type="text" id="granttype">
+    
+    Client ID Destination:<input type="text" id="clientidDestination">
+    Client Secet Destination:<input type="text" id="clientsecretDestination">
+    Account Id Destination :<input type="text" id="accountIdDestination"> 
+    Grant Type Destination :<input type="text" id="granttype">
 </div>
 <div id="step2" class="step">
     Here's a second page with some info on it.
