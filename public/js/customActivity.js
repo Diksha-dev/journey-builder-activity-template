@@ -34,6 +34,13 @@ define([
 console.log("Inside onrender");
         connection.trigger('requestTokens');
         connection.trigger('requestEndpoints');
+        $('#select1').change(function() {
+            var message = getMessage();
+            connection.trigger('updateButton', { button: 'next', enabled: Boolean(message) });
+
+            $('#message').html(message);
+        });
+
 
     }
     console.log("Hiii");
@@ -114,7 +121,8 @@ console.log("Inside onrender");
             case 'step1':
                 $('#step1').show();
                 connection.trigger('updateButton', {
-                    button: 'next'
+                    button: 'next',
+                       enabled: Boolean(getMessage())
               
                 });
                 connection.trigger('updateButton', {
@@ -173,6 +181,9 @@ console.log("Inside onrender");
 
         console.log("Payload"+payload);
         connection.trigger('updateActivity', payload);
+    }
+     function getMessage() {
+        return $('#select1').find('option:selected').attr('value').trim();
     }
 
 
