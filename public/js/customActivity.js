@@ -114,8 +114,8 @@ console.log("Inside onrender");
             case 'step1':
                 $('#step1').show();
                 connection.trigger('updateButton', {
-                    button: 'next',
-                    enabled: Boolean(getMessage())
+                    button: 'next'
+              
                 });
                 connection.trigger('updateButton', {
                     button: 'back',
