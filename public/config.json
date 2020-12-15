@@ -1,79 +1,89 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-        "icon": "images/icon.png",
-        "iconSmall": "images/iconSmall.png",
-        "category": "message"
+       "icon": "images/sms.png",
+       "category": "message"
     },
     "type": "REST",
     "lang": {
-        "en-US": {
-            "name": "Template2",
-          "description": "A Template for a custom Journey Builder activity",
-        }
+       "en-US": {
+           "name": "REST Activity (Workflow API v1.1)",
+           "description": "An example REST activity using workflow API v1.1 format."
+       }
     },
     "arguments": {
         "execute": {
-           "inArguments":[
-		   
-			   { "contactKey":"{{Contact.Key}}"} , 
-		   { "emailAddress": "{{Contact.Attribute.TestCustomActivityDE.EmailAddress}}" }
-                
-												
-			],
-          "outArguments": [
-		
-	  ],
-          "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/execute",
-           "verb": "POST",
-            "body": "" ,
-            "header": "",
-            "format": "json",
-            "useJwt": true,
-            "timeout": 10000
+            "inArguments": [
+                {
+                    "emailAddress": "{{InteractionDefaults.Email}}"
+                },
+                {
+                    "phoneNumber": "{{Contact.Default.PhoneNumber}}"
+                }
+            ],
+            "outArguments": [
+                {
+                    "foundSignupDate": ""
+                }
+            ],
+            "url": "https://enh82qm9f1l1fwx.m.pipedream.net/execute"
         }
     },
     "configurationArguments": {
-      "applicationExtensionKey": "fc17fdaf-ac48-4bf0-b7c6-b85cf48447bc",
-      "save": {
-        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/save",
-          "verb": "POST",
-        "useJwt": true
+       "save": {
+           "url": "https://enh82qm9f1l1fwx.m.pipedream.net/save"
        },
        "publish": {
-        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/publish",
-           "verb": "POST",
-        "useJwt": true
+           "url": "https://enh82qm9f1l1fwx.m.pipedream.net/publish"
        },
-      "stop": {
-        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/stop",
-           "verb": "POST",
-        "useJwt": true
-      },
-      "validate": {
-        "url": "https://enh82qm9f1l1fwx.m.pipedream.net/journeybuilder/validate",
-        "verb": "POST",
-        "useJwt": true
-      }
+       "validate": {
+           "url": "https://enh82qm9f1l1fwx.m.pipedream.net/validate"
+       },
+       "stop": {
+           "url": "https://enh82qm9f1l1fwx.m.pipedream.net/stop"
+       }
     },
     "wizardSteps": [
-        { "label": "Step 1", "key": "step1" },
+       { "label": "Step 1", "key": "step1" },
        { "label": "Step 2", "key": "step2" },
        { "label": "Step 3", "key": "step3" },
        { "label": "Step 4", "key": "step4", "active": false }
     ],
     "userInterfaces": {
-        "configModal": {
-            "height": 400,
-            "width": 1000,
-          "fullscreen": false
-        }
+       "configModal": {
+           "height": 200,
+           "width": 300,
+           "fullscreen": true
+       }
     },
     "schema": {
         "arguments": {
             "execute": {
-                "inArguments": [],
-                "outArguments": []
+                "inArguments": [
+                    {
+                        "phoneNumber": {
+                            "dataType": "Phone",
+                            "isNullable": false,
+                            "direction": "in"   
+                        }
+                    },
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
+                ],
+                "outArguments": [
+                    {
+                        "foundSignupDate": {
+                            "dataType": "Date",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
+                ]
             }
         }
     }
